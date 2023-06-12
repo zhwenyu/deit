@@ -28,6 +28,12 @@ import models_v2
 
 import utils
 
+import wandb 
+
+wandb.init(
+      project = "deit_tiny_quarkGluon",
+      name = "deit"
+      )
 
 def get_args_parser():
     parser = argparse.ArgumentParser('DeiT training and evaluation script', add_help=False)
