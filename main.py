@@ -469,7 +469,10 @@ def main(args):
                      'epoch': epoch,
                      'n_parameters': n_parameters}
         
-        
+        ## wandb log
+        wandb.log({"epoch": epoch,
+                   "train_loss": train_stats['loss'], 
+                   "test_loss": test_stats['loss'], "test_acc1": test_stats['acc1']})        
         
         
         if args.output_dir and utils.is_main_process():
