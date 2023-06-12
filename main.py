@@ -30,10 +30,6 @@ import utils
 
 import wandb 
 
-wandb.init(
-      project = "deit_tiny_quarkGluon",
-      name = "deit"
-      )
 
 def get_args_parser():
     parser = argparse.ArgumentParser('DeiT training and evaluation script', add_help=False)
@@ -195,6 +191,12 @@ def get_args_parser():
 
 
 def main(args):
+    
+    wandb.init(
+      project = "deit_tiny_quarkGluon",
+      name = "deit"
+      )
+    
     utils.init_distributed_mode(args)
 
     print(args)
