@@ -193,7 +193,7 @@ def get_args_parser():
 def main(args):
     
     wandb.init(
-      project = "deit_tiny_quarkGluon",
+      project = "deit_quarkGluon",
       name = "deit"
       )
     
